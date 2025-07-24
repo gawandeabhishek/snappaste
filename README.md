@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SnapPaste
 
-## Getting Started
+**Gesture-Controlled Copy‑Paste, Right from the Browser.**
 
-First, run the development server:
+SnapPaste is a browser-based platform that brings futuristic copy‑paste to life using hand gestures. Built with **Next.js**, **TensorFlow.js**, and **real-time hand pose detection**, it enables users to copy and paste content simply by waving their hand—no extensions, no installations.
+
+---
+
+## 🧠 How It Works
+
+- Uses the **Handpose model** from TensorFlow.js to detect 21 key points on the hand from the webcam feed.
+- Distinguishes between **“grab”** and **“open”** gestures by calculating distances between the palm and fingertips.
+- Runs detection continuously via `requestAnimationFrame` for smooth, real-time gesture feedback.
+- Everything is handled **client-side**, ensuring privacy and zero setup—just open the site and wave.
+
+---
+
+## ⚙️ Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **AI:** TensorFlow.js, Handpose model
+- **UI:** Tailwind CSS, ShadCN/UI, Framer Motion
+- **Icons:** React Icons
+- **Webcam Input:** Native browser webcam API
+
+---
+
+## 🚀 Getting Started
+
+Clone and run locally:
 
 ```bash
-npm run dev
-# or
+git clone https://github.com/your-username/snappaste.git
+cd snappaste
+yarn install
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+````
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## ✨ Features
+
+* **Real-Time Gesture Detection**
+* **No Extensions or Downloads**
+* **Client-Side Only for Privacy**
+* **Cross-Browser Compatible**
+* **Smooth UX with Framer Motion**
+
+---
+
+## 📁 Environment Variables
+
+Create a `.env.local` file in the root of your project and define the following:
+
+| Variable             | Description                                  |
+| -------------------- | -------------------------------------------- |
+| `DATABASE_URL`       | Your database connection string              |
+| `AUTH_GOOGLE_ID`     | Google OAuth Client ID (from Google Console) |
+| `AUTH_GOOGLE_SECRET` | Google OAuth Client Secret                   |
+| `AUTH_SECRET`        | Random string for securing authentication    |
+
+Example `.env.local`:
+
+```env
+DATABASE_URL=postgresql://user:password@host:port/dbname
+AUTH_GOOGLE_ID=your-google-client-id
+AUTH_GOOGLE_SECRET=your-google-client-secret
+AUTH_SECRET=your-random-secret
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌐 Live Demo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Try it here: [https://snappaste.vercel.app](https://snappaste.vercel.app)
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🤝 Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Contributions are welcome! To contribute:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Fork the repo.
+2. Create a new branch: `git checkout -b feature/YourFeature`.
+3. Commit and push: `git commit -m "Add your feature"` and `git push origin feature/YourFeature`.
+4. Open a pull request.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧠 Inspiration
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The idea for SnapPaste came during a casual bus ride after seeing a reel showcasing Huawei’s air‑gesture demo. That evening, between 7–10 PM, the first prototype of the feature was built. The following night, from 7–9 PM, it was refined and completed. The result? **SnapPaste**—a gesture‑controlled copy‑paste platform.
+
+---
+
+## 📝 License
+
+This project is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International License**.
+See the [LICENSE](./LICENSE) file for details.
