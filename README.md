@@ -6,6 +6,14 @@ SnapPaste is a browser-based platform that brings futuristic copy‑paste to lif
 
 ---
 
+## 💖 Sponsor
+
+If you find SnapPaste useful, consider supporting its development!
+
+[![Sponsor gawandeabhishek](https://img.shields.io/static/v1?label=Sponsor&message=gawandeabhishek&color=ea4aaa&logo=github-sponsors&style=for-the-badge&logoColor=white)](https://github.com/sponsors/gawandeabhishek)
+
+---
+
 ## 🧠 How It Works
 
 - Uses the **Handpose model** from TensorFlow.js to detect 21 key points on the hand from the webcam feed.
